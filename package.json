@@ -1,0 +1,27 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "Exemplo de código em TS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugawag/banco-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gugawag/banco-js/issues"
+  },
+  "homepage": "https://github.com/gugawag/banco-js#readme",
+  "dependencies": {
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "^2.5.5"
+  }
+}
