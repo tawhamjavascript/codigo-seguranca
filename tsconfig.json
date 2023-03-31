@@ -4,6 +4,9 @@
     "outDir": "app/js",
     "noEmitOnError": true,
     "noImplicitAny": true,
+    "types": [
+      "node"
+    ],
     "lib": [
       "dom",
       "es6",

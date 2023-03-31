@@ -22,4 +22,14 @@ class Service {
         this._clientes.deletar(matricula);
     }
 
+    atualizar(nome: string, rua: string, numero : number, bairro: string, complemento: string,
+              cidade: string, estado: string, fone: number, matricula: string,
+              numerosFilhos: number, rendaFamiliar: number): void {
+
+       this._clientes.atualizar(nome, rua, numero, bairro, complemento, cidade, estado, fone, matricula,
+           numerosFilhos, rendaFamiliar);
+
+
+    }
+
 }

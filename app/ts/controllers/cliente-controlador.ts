@@ -7,16 +7,19 @@ class ClienteControlador {
 
     listar(): void {
         const clientes: Array<Cliente> = this._service.listar();
-        const dadosParagrafo: HTMLParagraphElement = document.createElement("p");
         clientes.forEach((cliente: Cliente) => {
             const dadosParagrafo: HTMLParagraphElement = document.createElement("p");
             dadosParagrafo.textContent = `${cliente.nome} - ${cliente.matricula} - ${cliente.fone}`;
             const botaoApagar: HTMLButtonElement = document.createElement("button");
+            const botaoEditar: HTMLButtonElement = document.createElement("button");
             botaoApagar.textContent = "X";
+            botaoEditar.textContent = "Editar";
             botaoApagar.addEventListener("click", (event: Event) => {
                 this._service.deletar(cliente.matricula);
                 (<Element>event.target).parentElement.remove();
             })
+
+            botaoEditar.addEventListener("click", () => window.location.assign("Actualization.html"));
             dadosParagrafo.appendChild(botaoApagar);
             document.body.appendChild(dadosParagrafo);
         })
@@ -31,9 +34,7 @@ class ClienteControlador {
         div_procurar.appendChild(paragrafo_cliente);
     }
 
-    inserir(e: Event): void {
-        e.preventDefault();
-
+    formCampus(): [string, string, number, string, string, string, string, number, string, number, number] {
         const inputMatricula: HTMLInputElement = <HTMLInputElement> document.querySelector("#matricula");
         const inputNome: HTMLInputElement = <HTMLInputElement> document.querySelector("#nome");
         const inputFone: HTMLInputElement = <HTMLInputElement> document.querySelector("#fone");
@@ -45,10 +46,22 @@ class ClienteControlador {
         const inputEstado: HTMLInputElement = <HTMLInputElement> document.querySelector("#estado");
         const inputNumeroFilho: HTMLInputElement = <HTMLInputElement> document.querySelector("#numerosFilhos");
         const inputRendaFamiliar: HTMLInputElement = <HTMLInputElement> document.querySelector("#rendaFamiliar");
-
-        this._service.cadastrar(inputNome.value, inputRua.value, Number(inputNumero.value), inputBairro.value,
+        return [inputNome.value, inputRua.value, Number(inputNumero.value), inputBairro.value,
             inputComplemento.value, inputCidade.value, inputEstado.value, Number(inputFone.value),
-            inputMatricula.value, Number(inputNumeroFilho.value), Number(inputRendaFamiliar.value));
+            inputMatricula.value, Number(inputNumeroFilho.value), Number(inputRendaFamiliar.value)]
+
+
+    }
+
+    inserir(e: Event): void  {
+        e.preventDefault();
+        this._service.cadastrar(...this.formCampus());
+
+    }
+
+    atualizar(e: Event): void {
+        e.preventDefault();
+        this._service.atualizar(...this.formCampus());
 
     }
 }

@@ -13,7 +13,7 @@ class Clientes {
         return this._clientes;
     }    
     procurar(matricula: string): Cliente {
-        return this._clientes.find((cliente: Cliente) => cliente.matricula == matricula);
+        return this._clientes.find((cliente: Cliente) => cliente.matricula === matricula);
 
     }
 
