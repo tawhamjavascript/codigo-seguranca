@@ -1,8 +1,12 @@
+import {json} from "stream/consumers";
+
 class Service {
     private _clientes: Clientes;
+    private _admin: Admin
 
     constructor() {
         this._clientes = new Clientes();
+        this._admin = new Admin();
 
     }
 
@@ -31,5 +35,21 @@ class Service {
 
 
     }
+    enviarEmail(): void {
+        const body: {data: Array<Cliente>, email: string} = {
+            data: this.listar(),
+            email: this._admin.email
 
+        }
+        const options = {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body),
+        };
+        fetch("https://RuralCoarseKeys.tawham2.repl.co/email", options)
+            .then(r => console.log(r));
+
+    }
 }

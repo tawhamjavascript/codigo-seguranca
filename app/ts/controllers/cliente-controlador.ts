@@ -64,6 +64,11 @@ class ClienteControlador {
         this._service.atualizar(...this.formCampus());
 
     }
+
+    enviarEmail() {
+
+
+    }
 }
 
 
