@@ -1,0 +1,50 @@
+body{
+    background-color:  #f7f5ff;
+    margin: 30px;
+    border: 90px;
+    padding: 50px 10% 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(87, 135, 214);
+   
+}
+
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    background-color:rgb(87, 135, 214);
+    color: #f7f5ff;
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    background-color:rgb(87, 135, 214);
+    color: #f7f5ff;
+}
+
+tr{
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    color: rgb(87, 135, 214);
+   
+}
+
+button{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    background: rgb(87, 135, 214);
+    transition: transform 1s;
+    transform: translateX(0) scale(1.0);
+    transform: scalex(1.0);
+    border: solid;
+    padding: 10px;
+}
+
+button:hover , button:focus{
+    color:rgb(87, 135, 214);
+    background: white;
+    transform: translateX(0) scale(1.0);
+    
+  }

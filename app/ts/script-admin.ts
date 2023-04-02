@@ -1,0 +1,1 @@
+const adminControlador: AdminControlador = new AdminControlador();

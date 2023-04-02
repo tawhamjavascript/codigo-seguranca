@@ -7,6 +7,7 @@ class ClienteControlador {
 
     listar(): void {
         const clientes: Array<Cliente> = this._service.listar();
+        console.log(clientes);
         clientes.forEach((cliente: Cliente) => {
             const dadosParagrafo: HTMLParagraphElement = document.createElement("p");
             dadosParagrafo.textContent = `${cliente.nome} - ${cliente.matricula} - ${cliente.fone}`;
@@ -21,7 +22,8 @@ class ClienteControlador {
 
             botaoEditar.addEventListener("click", () => window.location.assign("Actualization.html"));
             dadosParagrafo.appendChild(botaoApagar);
-            document.body.appendChild(dadosParagrafo);
+            document.querySelector("listagem").appendChild(dadosParagrafo);
+
         })
     }
 
@@ -56,6 +58,7 @@ class ClienteControlador {
     inserir(e: Event): void  {
         e.preventDefault();
         this._service.cadastrar(...this.formCampus());
+        window.location.assign("listar.html");
 
     }
 
@@ -66,6 +69,7 @@ class ClienteControlador {
     }
 
     enviarEmail() {
+        this._service.enviarEmail();
 
 
     }

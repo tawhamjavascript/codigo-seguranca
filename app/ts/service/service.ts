@@ -1,5 +1,3 @@
-import {json} from "stream/consumers";
-
 class Service {
     private _clientes: Clientes;
     private _admin: Admin
