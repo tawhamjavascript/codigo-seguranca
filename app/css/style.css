@@ -12,9 +12,9 @@ body{
 
 h1{
     font-family: 'IBM Plex Sans', sans-serif;
+    font-size: small;
     text-align: center;
-    background-color:rgb(87, 135, 214);
-    color: #f7f5ff;
+    color:rgb(87, 135, 214);
 }
 
 div .form{
@@ -25,27 +25,10 @@ div .form{
     flex-basis: 100%; 
 }
 
-table{
+div .table-striped{
     font-family: 'IBM Plex Sans', sans-serif;
     text-align: center;
     background-color:rgb(87, 135, 214);
     color: #f7f5ff;
 }
 
-button{
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: white;
-    background: rgb(87, 135, 214);
-    transition: transform 1s;
-    transform: translateX(0) scale(1.0);
-    transform: scalex(1.0);
-    border: solid;
-    padding: 10px;
-}
-
-button:hover , button:focus{
-    color:rgb(87, 135, 214);
-    background: white;
-    transform: translateX(0) scale(1.0);
-    
-  }
