@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Inserir Cliente</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
- <h1> Inserir Dados dos Clientes </h1>
+ <h1> Início </h1>
     <form class="form">
 
       <div class="form-group">
@@ -16,17 +17,17 @@
 
       <div class="form-group">
           <label for="nome">Nome</label>
-          <input id="nome" type="string" class="form-control"  required/>
+          <input id="nomecliente" type="string" class="form-control"  required/>
       </div>
 
       <div class="form-group">
            <label for="fone">Fone</label>
-           <input id="fone" type="number" class="form-control"  required/>
+           <imput id="fone" type="number" class="form-control"  required/>
       </div>
 
       <div class="form-group">
         <label for="rua">Rua</label>
-        <input id="rua" type="string" class="form-control"  required/>
+        <imput id="rua" type="string" class="form-control"  required/>
       </div>
 
       <div class="form-group">
@@ -64,17 +65,63 @@
         <input id="rendaFamiliar" type="number" class="form-control" required/>
       </div> 
 
-      <button class="btn btn-primary" type="submit" onclick="clienteControlador.inserir(event)">Inserir</button>
+      <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir Dados</button>
+      <button class="btn btn-primary" type="submit" onclick="clienteController.atualizar(event)">Atualizar Dados</button>
+
+      <h1> Procurar Cliente </h1>
+      
+      <div class="form-group">
+        <label for="matricula">Matrícula</label>
+        <input id="matricula" type="number" class="form-control" required/>
+        <div id = "search"> </div> 
+
+      </div>
+
+      <button class="btn btn-primary" type="submit" onclick="clienteController.procurar(event)">Enviar</button>
+
+     <h1>Listagem de Clientes </h1>
+     <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Matrícula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+      
+      
+      <button class="btn btn-primary" type="submit" onclick="clienteController.enviar(event)">Enviar E-mail</button>
       
     </form>
-    <script src="../js/modelo/endereco.js"> </script>
-    <script src="../js/modelo/cliente.js"> </script>
-    <script src="../js/modelo/clientes.js"> </script>
-    <script src="../js/modelo/admin.js"> </script>
-    <script src="../js/service/service.js"> </script>
-    <script src="../js/controllers/cliente-controlador.js"></script>
-    <script src="../js/script.js"></script>
   
+  <script src="app/js/modelo/cliente.js"></script>
+  <script src="app/js/modelo/clientes.js"></script>
+  <script src="app/js/controllers/cliente-controlador.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>
