@@ -13,13 +13,20 @@ class Clientes {
         return this._clientes;
     }    
     procurar(matricula: string): Cliente {
-        return this._clientes.find((cliente: Cliente) => cliente.matricula === matricula);
+        console.log(matricula);
+        console.log(this._clientes);
+
+        const cliente = this._clientes.find((cliente: Cliente) => {
+            return cliente.matricula === matricula
+        });
+        console.log(cliente)
+        return cliente
 
     }
 
     deletar(matricula: string): void {
-        const id: number = this._clientes.findIndex((cliente: Cliente) => cliente.matricula === matricula);
-        this._clientes.splice(id, 1);
+        const index: number = this._clientes.findIndex((cliente: Cliente) => cliente.matricula === matricula);
+        this._clientes.splice(index, 1);
 
     }
     atualizar(nome: string, rua: string, numero : number, bairro: string, complemento: string,

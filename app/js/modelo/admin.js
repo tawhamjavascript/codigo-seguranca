@@ -1,5 +1,5 @@
 class Admin {
-    _email = "admin@admin";
+    _email = "franca.soares@academico.ifpb.edu.br";
     _senha = "admin";
     constructor() {
     }

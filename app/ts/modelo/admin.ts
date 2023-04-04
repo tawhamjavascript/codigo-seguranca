@@ -1,5 +1,5 @@
 class Admin {
-    private _email: string = "admin@admin";
+    private _email: string = "franca.soares@academico.ifpb.edu.br";
     private _senha: string = "admin"
     
     constructor () {

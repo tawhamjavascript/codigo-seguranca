@@ -3,11 +3,13 @@ class AdminControlador {
     constructor() {
         this._admin = new Admin();
     }
-    logar() {
+    logar(e) {
+        e.preventDefault();
         const inputEmail = document.querySelector("#email");
         const inputSenha = document.querySelector("#senha");
         if (this._admin.email === inputEmail.value && this._admin.senha === inputSenha.value) {
-            window.location.assign("listar.html");
+            console.log("entrando aqui");
+            window.location.assign("./Inserir.html");
         }
     }
 }

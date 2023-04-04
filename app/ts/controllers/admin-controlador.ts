@@ -5,11 +5,13 @@ class AdminControlador {
         this._admin = new Admin(); 
     }
 
-    logar(): void {
+    logar(e: Event): void {
+        e.preventDefault();
         const inputEmail: HTMLInputElement = <HTMLInputElement> document.querySelector("#email");
         const inputSenha: HTMLInputElement = <HTMLInputElement> document.querySelector("#senha");
         if (this._admin.email === inputEmail.value && this._admin.senha === inputSenha.value) {
-            window.location.assign("listar.html");
+            console.log("entrando aqui");
+            window.location.assign("./Inserir.html");
         }
     }
 }

@@ -12,22 +12,22 @@
 
       <div class="form-group">
           <label for="matricula">Matricula</label>
-          <input id="matricula" type="number" class="form-control" required/>
+          <input id ="matricula" type="number" class="form-control" required/>
       </div>
 
       <div class="form-group">
           <label for="nome">Nome</label>
-          <input id="nomecliente" type="string" class="form-control"  required/>
+          <input id="nome" type="string" class="form-control"  required/>
       </div>
 
       <div class="form-group">
            <label for="fone">Fone</label>
-           <imput id="fone" type="number" class="form-control"  required/>
+           <input id="fone" type="number" class="form-control"  required/>
       </div>
 
       <div class="form-group">
         <label for="rua">Rua</label>
-        <imput id="rua" type="string" class="form-control"  required/>
+        <input id="rua" type="string" class="form-control"  required/>
       </div>
 
       <div class="form-group">
@@ -65,63 +65,66 @@
         <input id="rendaFamiliar" type="number" class="form-control" required/>
       </div> 
 
-      <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir Dados</button>
-      <button class="btn btn-primary" type="submit" onclick="clienteController.atualizar(event)">Atualizar Dados</button>
+      <button class="btn btn-primary" type="submit" onclick="clienteControlador.inserir(event)">Inserir Dados</button>
+      <button class="btn btn-primary" type="submit" onclick="clienteControlador.atualizar(event)"> Atualizar Dados </button>
+    </form>
 
-      <h1> Procurar Cliente </h1>
-      
-      <div class="form-group">
+    <h1> Procurar Cliente </h1>
+      <div id = "search" class="form-group">
         <label for="matricula">Matrícula</label>
-        <input id="matricula" type="number" class="form-control" required/>
-        <div id = "search"> </div> 
+        <input id="matriculaProcurar" type="number" class="form-control" required/>
+          <button onclick="clienteControlador.procurar()"> procurar </button>
+
 
       </div>
 
-      <button class="btn btn-primary" type="submit" onclick="clienteController.procurar(event)">Enviar</button>
-
      <h1>Listagem de Clientes </h1>
-     <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">Cliente</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Matrícula</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col"> Nome</th>
+            <th scope="col">Matricula</th>
+            <th scope="col">Fone</th>
+            <th scope="col">Rua</th>
+            <th scope="col">Numero</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">Complemento </th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Número de filhos</th>
+            <th scope="col">Renda Familiar</th>
+            <th scope="col"> Apagar </th>
+            <th scope="col"> Editar </th>
+          </tr>
+        </thead>
+        <tbody id = "listagem">
+
+          
+        </tbody>
+      </table>
+
+    </div>
+
       
       
-      <button class="btn btn-primary" type="submit" onclick="clienteController.enviar(event)">Enviar E-mail</button>
-      
-    </form>
+ <button class="btn btn-primary" onclick="clienteControlador.enviarEmail(event)">Enviar E-mail</button>
   
-  <script src="app/js/modelo/cliente.js"></script>
-  <script src="app/js/modelo/clientes.js"></script>
-  <script src="app/js/controllers/cliente-controlador.js"></script>
+  <script src="../js/modelo/cliente.js"></script>
+  <script src="../js/modelo/endereco.js"></script>
+  <script src="../js/modelo/clientes.js"></script>
+
+  <script src="../js/modelo/admin.js"> </script>
+  <script src="../js/service/service.js"> </script>
+  <script src="../js/controllers/cliente-controlador.js"></script>
+  <script src="../js/controllers/admin-controlador.js"></script>
+
+  <script src="../js/script.js"> </script>
+  <script src="../js/script-admin.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
 
 </body>
 </html>

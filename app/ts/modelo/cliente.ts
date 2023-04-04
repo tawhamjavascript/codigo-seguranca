@@ -21,6 +21,10 @@ class Cliente {
     set nome(newNome: string) {
         this._nome = newNome;
     }
+    get matricula(): string {
+        return this._matricula;
+    }
+
     set matricula(newMatricula: string) {
         if (this._matricula == undefined){
             this._matricula = newMatricula

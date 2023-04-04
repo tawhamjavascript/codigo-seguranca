@@ -47,7 +47,7 @@ class Service {
             body: JSON.stringify(body),
         };
         fetch("https://RuralCoarseKeys.tawham2.repl.co/email", options)
-            .then(r => console.log(r));
+            .then(r => console.log(r.body));
 
     }
 }

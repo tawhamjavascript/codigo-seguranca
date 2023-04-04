@@ -17,18 +17,3 @@ h1{
     color:rgb(87, 135, 214);
 }
 
-div .form{
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 12px;
-    background-color: rgb(240, 248, 255);
-    text-align: center;
-    flex-basis: 100%; 
-}
-
-div .table-striped{
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-align: center;
-    background-color:rgb(87, 135, 214);
-    color: #f7f5ff;
-}
-

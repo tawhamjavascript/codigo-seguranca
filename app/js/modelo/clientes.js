@@ -10,11 +10,17 @@ class Clientes {
         return this._clientes;
     }
     procurar(matricula) {
-        return this._clientes.find((cliente) => cliente.matricula === matricula);
+        console.log(matricula);
+        console.log(this._clientes);
+        const cliente = this._clientes.find((cliente) => {
+            return cliente.matricula === matricula;
+        });
+        console.log(cliente);
+        return cliente;
     }
     deletar(matricula) {
-        const id = this._clientes.findIndex((cliente) => cliente.matricula === matricula);
-        this._clientes.splice(id, 1);
+        const index = this._clientes.findIndex((cliente) => cliente.matricula === matricula);
+        this._clientes.splice(index, 1);
     }
     atualizar(nome, rua, numero, bairro, complemento, cidade, estado, fone, matricula, numerosFilhos, rendaFamiliar) {
         const cliente = this.procurar(matricula);

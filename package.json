@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gugawag/banco-js#readme",
   "dependencies": {
+    "sweetalert2": "^11.7.3",
     "typescript": "^5.0.2"
   },
   "devDependencies": {
